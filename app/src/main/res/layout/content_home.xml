@@ -7,15 +7,68 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_home"
-    tools:context="com.skywalker.doordashdemo.HomeActivity">
+    tools:context="com.skywalker.doordashdemo.home.HomeActivity">
 
-  <TextView
+  <ImageView
+      android:id="@+id/location_icon"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Hello World!"
+      app:srcCompat="@drawable/ic_home"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:contentDescription="@string/location_icon_description"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginStart="10dp"/>
+
+  <TextView
+      style="@style/LocationChooser"
+      android:id="@+id/location_text"
+      android:text="1201 3rd Ave"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      app:layout_constraintLeft_toRightOf="@+id/location_icon"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      android:layout_marginStart="10dp"
+      app:layout_constraintBottom_toBottomOf="@+id/location_icon"
+      android:layout_marginEnd="10dp"
+      app:layout_constraintTop_toTopOf="@+id/location_icon"/>
+
+  <android.support.v4.widget.SwipeRefreshLayout
+      android:id="@+id/swipe_refresh_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toTopOf="@+id/guideline"
+      app:layout_constraintRight_toRightOf="parent"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toTopOf="parent"/>
+      app:layout_constraintVertical_bias="0.0"
+      app:layout_constraintHorizontal_bias="0.0">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/resturants_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+  </android.support.v4.widget.SwipeRefreshLayout>
+
+
+  <android.support.constraint.Guideline
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/guideline"
+      app:layout_constraintGuide_begin="56dp"
+      android:orientation="horizontal"
+      tools:layout_editor_absoluteY="56dp"
+      tools:layout_editor_absoluteX="0dp"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -5,4 +5,12 @@
   <string name="navigation_drawer_close">Close navigation drawer</string>
 
   <string name="action_settings">Settings</string>
+
+  <string name="restaurants">Restaurants</string>
+  <string name="location_icon_description">location_icon</string>
+  <string name="add_to_favorite_button_description">location_icon</string>
+  <string name="delivering_to">Delivering To</string>
+  <string name="home">Home</string>
+  <string name="sign_in">Register / Sign In</string>
+  <string name="no_restaurants">Sorry, No Restaurants yet, but we will make it happen soon</string>
 </resources>

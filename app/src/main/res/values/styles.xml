@@ -14,4 +14,46 @@
   <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
   <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
+  <style name="LocationChooser">
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">@dimen/text_size_middle</item>
+  </style>
+
+  <style name="RestaurantCardView" parent="CardView">
+    <item name="android:background">@color/greyLight</item>
+    <item name="android:foreground">?attr/selectableItemBackground</item>
+    <item name="android:layout_marginTop">@dimen/restaurant_card_top</item>
+    <item name="android:layout_marginBottom">@dimen/restaurant_card_bottom</item>
+    <item name="android:layout_marginLeft">@dimen/restaurant_card_side</item>
+    <item name="android:layout_marginRight">@dimen/restaurant_card_side</item>
+    <item name="cardCornerRadius">@dimen/restaurant_card_radius</item>
+    <item name="cardElevation">@dimen/restaurant_card_elevation</item>
+  </style>
+
+  <style name="RestaurantCardText">
+    <item name="android:maxLines">1</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="RestaurantCardText.Title" parent="RestaurantCardText">
+    <item name="android:textSize">@dimen/text_size_small</item>
+    <item name="android:textColor">@android:color/black</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="RestaurantCardText.Tags" parent="RestaurantCardText">
+    <item name="android:textSize">@dimen/text_size_small</item>
+    <item name="android:textColor">@color/greyLight</item>
+  </style>
+
+  <style name="RestaurantCardText.Price" parent="RestaurantCardText">
+    <item name="android:textSize">@dimen/text_size_smaller</item>
+    <item name="android:textColor">@color/greyDark</item>
+  </style>
+
+  <style name="RestaurantCardText.Status" parent="RestaurantCardText">
+    <item name="android:textSize">@dimen/text_size_smaller</item>
+    <item name="android:textColor">@color/greyDark</item>
+  </style>
+
 </resources>
